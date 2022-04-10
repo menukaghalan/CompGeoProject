@@ -1,3 +1,4 @@
+import pytest
 from circle import Circle
 
 circle_obj = Circle(10)
@@ -24,6 +25,9 @@ def test_set_radius():
     circle_obj.set_radius(5)
     assert circle_obj.radius == 5
 
+    circle_obj.set_radius("hello")
+    assert circle_obj.radius == "hello"
+
 
 def test_area():
     circle_obj.set_radius(6)
@@ -33,3 +37,4 @@ def test_area():
 def test_perimeter():
     circle_obj.set_radius(8)
     assert circle_obj.perimeter() == 2*3.14*8
+
