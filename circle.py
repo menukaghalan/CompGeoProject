@@ -5,8 +5,12 @@ class Circle:
     def get_radius(self): 
         return self.radius 
       
-    def set_radius(self, radius): 
-        self.radius = radius
+    def set_radius(self, radius):
+        try:
+            float(radius)
+            self.radius = radius
+        except ValueError:
+            print("Radius must be a numerical value")
     
     def area(self):
         return self.radius**2*3.14
