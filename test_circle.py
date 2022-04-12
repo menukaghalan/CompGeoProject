@@ -26,7 +26,7 @@ def test_set_radius():
     assert circle_obj.radius == 5
 
     circle_obj.set_radius("hello")
-    assert circle_obj.radius == "hello"
+    assert circle_obj.radius == 5
 
 
 def test_area():
