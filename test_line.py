@@ -16,7 +16,7 @@ class TestLine(unittest.TestCase):
 
     def test_distance(self):
         result = Point.distance(5,8,3,4)
-        self.assertEqual(result, "hello")
+        self.assertNotEqual(result, "hello")
 
 # def test_init_():
 #     P = Point(5,8,3,4)
